@@ -5,6 +5,7 @@
 }
 
 body {
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +30,7 @@ nav {
 
     .naviagation-logo {
         h1 {
-            font-size: 1.75rem;
+            font-size: 1.8rem;
             font-family: Roboto;
         }
     }
@@ -58,21 +59,58 @@ nav {
         }
     }
 
-    .navigation-logup {
-        background-color: rgb(87, 87, 218);
-        padding: 5px 40px ;
-        border-radius: 10px;
+}
 
-        &:hover {
-            scale: 1.1;
-            transition: 0.2s;
-        }
-        
-        a {
-            text-decoration: none;
-            color: white;
+
+section {
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .popup-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        padding: 50px 100px;
+        // border: 1px solid black;
+        border-radius: 10px;
+        background: linear-gradient(#fae3d9,rgb(216, 216, 216),);
+
+        .popup-header {
             font-family: Roboto;
-            
+        }
+    }
+
+    .popup-forms {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column  ;
+        gap: 20px;
+
+        input {
+            padding: 7px 30px;
+            border: none;
+            background-color:rgb(219, 219, 219) ;
+            border-radius: 10px;
+        }
+
+        #input-date {
+            padding: 7px 60px;
+        }
+
+        button {
+            padding: 7px 60px;
+            border: none;
+            background-color: rgb(87, 87, 218);
+            color: white;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: Roboto;
         }
     }
 }
