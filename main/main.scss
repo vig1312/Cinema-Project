@@ -1,13 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root{
     --width: 70%;
 }
-body{
+
+body {
     font-family: Roboto;
     background-color: #fae3d9;
-} 
+}
+
+header {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.75rem;
+    font-family: Roboto;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    // border: 1px solid black;
+
+    .naviagation-logo {
+        h1 {
+            font-size: 1.75rem;
+            font-family: Roboto;
+        }
+    }
+
+    .navigation-lists {
+        
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            li {
+                list-style-type: none;
+                &:hover {
+                    scale: 1.1;
+                    transition: 0.2s;
+                }
+                
+
+                a {
+                    text-decoration: none ;
+                    color: rgb(177, 177, 177);
+                    font-size: 1.3rem;
+                    font-family: Roboto;
+
+                    &:hover {
+                        scale: 1.1;
+                        color: black;
+                        transition: 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .navigation-logup {
+        background-color: rgb(87, 87, 218);
+        padding: 5px 40px ;
+        border-radius: 10px;
+
+        &:hover {
+            scale: 1.1;
+            transition: 0.2s;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: Roboto;
+            
+        }
+    }
+}
+
+
 .container{
     width: var(--width);
-    height: 2000px;
+    height: 200vh;
     background-color: white;
     margin: auto;
     padding: 5px 40px;
@@ -16,11 +99,19 @@ body{
     width: 100%;
     margin: auto;  
     background-color: white;
-    padding: 10px;
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1.875rem;
+
     .popular-img{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
         .pics{
             width: 200px;
             height: 300px;

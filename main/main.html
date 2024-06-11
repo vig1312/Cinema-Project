@@ -9,10 +9,25 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
 </head>
-<body>
+<body onload="onLoad()">
     <div class="container">
-        <header></header>
-        <nav></nav>
+        <header>
+            <marquee behavior="scroll" direction="right" scrollamount="20">VARDANYAN'S CINEMA</marquee>
+        </header>
+        <nav>
+            <div class="navigation-lists">
+                <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">Top Films</a></li>
+                    <li><a href="#">Advanced Films</a></li>
+                    <li><a href="#">More...</a></li>
+                </ul>
+            </div>
+    
+            <div class="navigation-logup">
+                <a href="../popup/popup.html">Log up</a>
+            </div>
+        </nav>
         <div class="top-5-films">
             <h1>Popular</h1>
             <div class="popular-img">
@@ -47,11 +62,10 @@
                     </a>
                 </div>
             </div>
-            
         </div>
-        <div class="advanced-films"></div>
-        <footer></footer>
     </div>
+    <div class="advanced-films"></div>
+    <footer></footer>
     <script src="main.js"></script>    
 </body>
 </html>
