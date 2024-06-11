@@ -67,9 +67,15 @@ nav .navigation-lists ul li:hover {
   transition: 0.2s;
 }
 nav .navigation-lists ul li a {
-  text-decoration: underline;
-  color: black;
+  text-decoration: none;
+  color: rgb(177, 177, 177);
   font-size: 1.3rem;
+  font-family: Roboto;
+}
+nav .navigation-lists ul li a:hover {
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 section {
@@ -141,4 +147,10 @@ section .popup-forms button {
   border-radius: 10px;
   font-size: 0.95rem;
   font-family: Roboto;
+  cursor: pointer;
+}
+section .popup-forms button:hover {
+  scale: 0.95;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
