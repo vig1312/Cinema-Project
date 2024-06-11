@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --width: 70%;
+}
+
+body {
+  font-family: Roboto;
+  background-color: #fae3d9;
+}
+
+header {
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 1.75rem;
+  font-family: Roboto;
+  width: 100%;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+nav .naviagation-logo h1 {
+  font-size: 1.75rem;
+  font-family: Roboto;
+}
+nav .navigation-lists ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+nav .navigation-lists ul li {
+  list-style-type: none;
+}
+nav .navigation-lists ul li:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .navigation-lists ul li a {
+  text-decoration: none;
+  color: rgb(177, 177, 177);
+  font-size: 1.3rem;
+  font-family: Roboto;
+}
+nav .navigation-lists ul li a:hover {
+  scale: 1.1;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .navigation-logup {
+  background-color: rgb(87, 87, 218);
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+nav .navigation-logup:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+nav .navigation-logup a {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto;
+}
+
+.container {
+  width: var(--width);
+  height: 200vh;
+  background-color: white;
+  margin: auto;
+  padding: 5px 40px;
+}
+
+.top-5-films {
+  width: 100%;
+  margin: auto;
+  background-color: white;
+  padding: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.875rem;
+}
+.top-5-films .popular-img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+.top-5-films .popular-img .pics {
+  width: 200px;
+  height: 300px;
+}
+.top-5-films .popular-img .faw-pic {
+  width: 200px;
+  height: 300px;
+  border-radius: 5px;
+}
