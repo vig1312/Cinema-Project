@@ -7,8 +7,6 @@ let interstellar = {
     director: "Christopher Nolan" 
 }
     
-
-
 document.getElementById("year").innerHTML = interstellar.year;
 document.getElementById("country").innerHTML = interstellar.country;
 document.getElementById("genre").innerHTML = interstellar.genre;
