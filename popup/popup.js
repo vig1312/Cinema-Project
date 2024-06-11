@@ -7,10 +7,10 @@ let users = [];
 
 submitButton.addEventListener("click",function() {
     return new Promise(function(resolve,reject) {
-        const usernameregexp = /^\w+$/;
-        const passwordregexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+        const usernameRegexp = /^\w+$/;
+        const passwordRegexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
         setTimeout(function() {
-            if(passwordregexp.test(inputPassword.value) && usernameregexp.test(inputUserName.value) ) {
+            if(passwordRegexp.test(inputPassword.value) && usernameRegexp.test(inputUserName.value) ) {
                 resolve(users.push({
                     username: inputUserName.value,
                     password: inputPassword.value,
