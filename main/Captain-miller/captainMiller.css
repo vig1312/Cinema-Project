@@ -1,12 +1,14 @@
 body {
   font-family: ROBOTO;
-  background-color: #fae3d9;
+  background-image: url("../top5/img 2.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
-  height: 200vh;
+  height: 150vh;
   width: 70%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95);
   margin: auto;
   padding: 5px 40px;
 }
@@ -19,8 +21,8 @@ body {
           justify-content: center;
 }
 .container .about img {
-  width: 250px;
-  height: 400px;
+  width: 350px;
+  height: 450px;
   border-radius: 5px;
 }
 .container .about table {
@@ -31,8 +33,9 @@ body {
   width: 130px;
 }
 .container .description {
-  width: 600px;
+  width: 50%;
   margin: auto;
+  margin-bottom: 70px;
 }
 .container iframe {
   width: 50%;
@@ -43,7 +46,7 @@ body {
   background-color: rgb(203, 175, 230);
   width: 50%;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
