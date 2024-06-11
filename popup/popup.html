@@ -4,34 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="popup.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     </style>
 </head>
-<body onload="onLoad()">
+<body>
     <header>
         <marquee behavior="scroll" direction="right" scrollamount="20">VARDANYAN'S CINEMA</marquee>
     </header>
     <nav>
         <div class="navigation-lists">
             <ul>
-                <li><a href="#">Main</a></li>
+                <li><a href="file:///C:/Users/User/Desktop/Cinema-project/main/main.html">Main</a></li>
                 <li><a href="#">Top Films</a></li>
                 <li><a href="#">Advanced Films</a></li>
                 <li><a href="#">More...</a></li>
             </ul>
         </div>
 
-        <div class="navigation-logup">
-            <a href="../popup/popup.html">Log up</a>
-        </div>
+       
     </nav>
-    <div class="top-5-films"></div>
-    <div class="advanced-films"></div>
+
+    <section>
+        <div class="popup-container">
+            <div class="popup-header">
+                <h1>SIGN UP FOR MORE TOOLS</h1>
+            </div>
+
+            <div class="popup-forms">
+                <input type="text" name="" id="input-username" placeholder="Enter your username...">
+                <input type="password" name="" id="input-password" placeholder="Enter your password">
+                <input type="date" name="" id="input-date">
+                <button id="popup-submit">Submit</button>
+            </div>
+        </div>
+    </section>
+
     <footer></footer>
 
 
-    <script src="main.js"></script>    
+    <script src="popup.js"></script>    
 </body>
 </html>
