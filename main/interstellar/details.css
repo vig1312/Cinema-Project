@@ -1,0 +1,72 @@
+body {
+  font-family: ROBOTO;
+  background-color: #fae3d9;
+}
+
+.container {
+  height: 200vh;
+  width: 70%;
+  background-color: white;
+  margin: auto;
+  padding: 5px 40px;
+}
+.container .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container .about img {
+  width: 250px;
+  height: 400px;
+  border-radius: 5px;
+}
+.container .about table {
+  padding-left: 20px;
+}
+.container .about table .table-key {
+  font-weight: bold;
+  width: 130px;
+}
+.container .description {
+  width: 600px;
+  margin: auto;
+}
+.container iframe {
+  width: 600px;
+  display: block;
+  margin: auto;
+}
+.container .booking {
+  background-color: rgb(203, 175, 230);
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2px;
+}
+.container .booking .boxes {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(148, 230, 148);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}

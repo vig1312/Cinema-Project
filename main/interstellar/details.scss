@@ -1,0 +1,58 @@
+body{
+    font-family: ROBOTO;
+    background-color: #fae3d9;
+}
+.container{
+    height: 200vh;
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    padding: 5px 40px; 
+    .about{
+        
+        display: flex;
+        justify-content: center;
+        img{
+            width: 250px;
+            height: 400px;
+            border-radius: 5px;
+        }
+        table{
+            padding-left: 20px;
+            .table-key{
+                font-weight: bold;
+                width: 130px; 
+            }
+        }
+    }
+    .description {
+        width: 600px;
+        margin: auto;
+    }
+    iframe {
+        width: 600px;
+        display: block;
+        margin: auto;
+    }
+    .booking{
+        background-color: rgb(203, 175, 230);
+        width: 50%;
+        // height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2px;
+        .boxes{
+            width: 30px;
+            height: 30px;
+            background-color: rgb(148, 230, 148);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    
+   
+}
