@@ -6,20 +6,16 @@
 }
 
 body {
+  font-family: Roboto;
+  background-color: #fae3d9;
+}
+
+.container {
+  width: 70%;
+  height: 100vh;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  margin: auto;
+  padding: 5px 40px;
 }
 
 header {
@@ -27,7 +23,7 @@ header {
   padding: 10px;
   font-size: 1.75rem;
   font-family: Roboto;
-  width: 70%;
+  width: 100%;
 }
 
 nav {
@@ -40,7 +36,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px;
-  width: 70%;
+  width: 100%;
 }
 nav .naviagation-logo h1 {
   font-size: 1.8rem;
@@ -79,7 +75,7 @@ nav .navigation-lists ul li a:hover {
 }
 
 section {
-  width: 70%;
+  width: 100%;
   height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,8 +104,8 @@ section .popup-container {
   gap: 40px;
   padding: 50px 100px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fae3d9), to(rgb(216, 216, 216)));
-  background: linear-gradient(#fae3d9, rgb(216, 216, 216));
+  background: -webkit-gradient(linear, left top, left bottom, from(#fae3d9), to(rgb(240, 240, 240)));
+  background: linear-gradient(#fae3d9, rgb(240, 240, 240));
 }
 section .popup-container .popup-header {
   font-family: Roboto;
