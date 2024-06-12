@@ -25,6 +25,10 @@ body{
             }
         }
     }
+    span {
+        font-weight: bold;
+        
+    }
     .description {
         width: 600px;
         margin: auto;
@@ -35,6 +39,7 @@ body{
         margin: auto;
     }
     .booking{
+        margin: auto;
         background-color: rgb(203, 175, 230);
         width: 50%;
         // height: 400px;
