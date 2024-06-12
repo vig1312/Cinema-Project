@@ -15,7 +15,14 @@ submitButton.addEventListener("click",function() {
                     username: inputUserName.value,
                     password: inputPassword.value,
                     date: inputDate.value,
-                    registered: true
+                    registered: true,
+                    tickets: {
+                        interstellar: [],
+                        dunePartTwo: [],
+                        captainMiller: [],
+                        theBeekeeper: [],
+                        suriyasKanguva: []
+                    }
                 }))
             } else {
                 reject("invalid Registration")

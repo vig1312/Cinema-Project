@@ -1,0 +1,137 @@
+body {
+  font-family: ROBOTO;
+  background-image: url("../top5/img 2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 70%;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: auto;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.container nav .navigation-lists ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.container nav .navigation-lists ul li {
+  list-style-type: none;
+}
+.container nav .navigation-lists ul li:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-lists ul li a {
+  text-decoration: none;
+  color: rgb(177, 177, 177);
+  font-size: 1.3rem;
+  font-family: Roboto;
+}
+.container nav .navigation-lists ul li a:hover {
+  scale: 1.1;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-logup {
+  background-color: rgb(87, 87, 218);
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.container nav .navigation-logup:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-logup a {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto;
+}
+.container .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+.container .about img {
+  width: 28%;
+  height: 500px;
+  border-radius: 5px;
+}
+.container .about table {
+  padding-left: 20px;
+}
+.container .about table .table-key {
+  font-weight: bold;
+  width: 130px;
+}
+.container .description {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 70px;
+}
+.container iframe {
+  width: 50%;
+  display: block;
+  margin: auto;
+}
+.container .booking {
+  background-color: rgb(203, 175, 230);
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2px;
+}
+.container .booking .boxes {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(148, 230, 148);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
