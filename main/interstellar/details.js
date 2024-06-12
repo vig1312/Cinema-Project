@@ -43,13 +43,12 @@ for (let i = 1; i <= 50; i++) {
     container.innerHTML = `${i}`
     container.addEventListener("click", function(){
         
-        let approve = confirm(`Do you want to buy ${i} ticket?`)
+        const approve = confirm(`Do you want to buy ${i} ticket?`)
 
         if (approve && !(members[0].tickets.interstellar.includes(i))){
             container.style.backgroundColor = "red";
             members[0].tickets.interstellar.push(i)
             localStorage.setItem("registeredUsers",JSON.stringify(members))
-            console.log(members)
             
         }
     
@@ -57,12 +56,3 @@ for (let i = 1; i <= 50; i++) {
     booking.appendChild(container)
 }
 
-let openbtn = document.getElementById("openbook");
-let btnx = document.getElementById("closebook");
-let modal = document.getElementById("booking");
-openbtn.onclick = function(){
-    modal.style.display = "box";
-} 
-btnx.onclick = function(){
-    modal.style.display = "none";
-}
