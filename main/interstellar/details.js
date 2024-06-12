@@ -1,4 +1,4 @@
-let interstellar = {
+const interstellar = {
     year: 2014,
     country: "USA",
     genre: "fantasy",
@@ -15,6 +15,14 @@ document.getElementById("genre").innerHTML = genre;
 document.getElementById("director").innerHTML = director;
 document.getElementById("producer").innerHTML = producer;
 document.getElementById("writer").innerHTML = writer;
+
+function onLoad() {
+    const users =  JSON.parse(localStorage.getItem("registeredUsers"))
+
+    if(users.length !== 0 ) {
+        document.querySelector(".navigation-logup").style.display =  "none";
+    }
+}
 
 const members = JSON.parse(localStorage.getItem("registeredUsers"))
 const booking = document.querySelector(".booking");

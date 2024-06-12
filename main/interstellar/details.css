@@ -1,14 +1,75 @@
 body {
   font-family: ROBOTO;
-  background-color: #fae3d9;
+  background-image: url("../top5/img 5.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .container {
-  height: 200vh;
   width: 70%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   margin: auto;
   padding: 5px 40px;
+  border-radius: 10px;
+}
+.container nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  width: 100%;
+}
+.container nav .navigation-lists ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.container nav .navigation-lists ul li {
+  list-style-type: none;
+}
+.container nav .navigation-lists ul li:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-lists ul li a {
+  text-decoration: none;
+  color: rgb(177, 177, 177);
+  font-size: 1.3rem;
+  font-family: Roboto;
+}
+.container nav .navigation-lists ul li a:hover {
+  scale: 1.1;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-logup {
+  background-color: rgb(87, 87, 218);
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.container nav .navigation-logup:hover {
+  scale: 1.1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.container nav .navigation-logup a {
+  text-decoration: none;
+  color: white;
+  font-family: Roboto;
 }
 .container .about {
   display: -webkit-box;
@@ -17,10 +78,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
 }
 .container .about img {
-  width: 250px;
-  height: 400px;
+  width: 28%;
+  height: 500px;
   border-radius: 5px;
 }
 .container .about table {
@@ -31,7 +93,7 @@ body {
   width: 130px;
 }
 .container .description {
-  width: 600px;
+  width: 50%;
   margin: auto;
 }
 .container iframe {
@@ -40,6 +102,7 @@ body {
   margin: auto;
 }
 .container .booking {
+  margin: auto;
   background-color: rgb(203, 175, 230);
   width: 50%;
   margin: auto;
