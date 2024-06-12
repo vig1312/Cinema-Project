@@ -34,7 +34,7 @@ body{
         margin: auto;
     }
     iframe {
-        width: 600px;
+        width: 50%;
         display: block;
         margin: auto;
     }
@@ -43,6 +43,8 @@ body{
         background-color: rgb(203, 175, 230);
         width: 50%;
         // height: 400px;
+        margin: auto;
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
