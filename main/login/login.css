@@ -5,13 +5,17 @@
           box-sizing: border-box;
 }
 
-:root {
-  --width: 70%;
-}
-
 body {
   font-family: Roboto;
   background-color: #fae3d9;
+}
+
+.container {
+  width: 70%;
+  height: 100vh;
+  background-color: white;
+  margin: auto;
+  padding: 5px 40px;
 }
 
 header {
@@ -35,7 +39,7 @@ nav {
   width: 100%;
 }
 nav .naviagation-logo h1 {
-  font-size: 1.75rem;
+  font-size: 1.8rem;
   font-family: Roboto;
 }
 nav .navigation-lists ul {
@@ -65,12 +69,14 @@ nav .navigation-lists ul li a {
   font-family: Roboto;
 }
 nav .navigation-lists ul li a:hover {
-  scale: 1.1;
   color: black;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-nav .navigation-popup {
+
+section {
+  width: 100%;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,100 +86,72 @@ nav .navigation-popup {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 20px;
 }
-nav .navigation-logup {
-  background-color: rgb(87, 87, 218);
-  padding: 5px 40px;
-  border-radius: 10px;
-}
-nav .navigation-logup:hover {
-  scale: 1.1;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-nav .navigation-logup a {
-  text-decoration: none;
-  color: white;
-  font-family: Roboto;
-}
-nav .navigation-login {
-  background-color: rgb(87, 87, 218);
-  padding: 5px 40px;
-  border-radius: 10px;
-}
-nav .navigation-login:hover {
-  scale: 1.1;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-nav .navigation-login a {
-  text-decoration: none;
-  color: white;
-  font-family: Roboto;
-}
-nav .navigation-logout {
-  background-color: rgb(87, 87, 218);
-  padding: 5px 40px;
-  border-radius: 10px;
-}
-nav .navigation-logout:hover {
-  scale: 1.1;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-nav .navigation-logout a {
-  text-decoration: none;
-  color: white;
-  font-family: Roboto;
-}
-
-.container {
-  width: var(--width);
-  height: 200vh;
-  background-color: white;
-  margin: auto;
-  padding: 5px 40px;
-}
-
-.top-5-films {
-  width: 100%;
-  margin: auto;
-  background-color: white;
-  padding: 0.625rem;
+section .popup-container-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.875rem;
+  gap: 40px;
+  padding: 50px 100px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fae3d9), to(rgb(240, 240, 240)));
+  background: linear-gradient(#fae3d9, rgb(240, 240, 240));
 }
-.top-5-films .popular-img {
-  width: 100%;
+section .popup-container-2 .popup-header-2 {
+  font-family: Roboto;
+}
+section .popup-forms-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
-.top-5-films .popular-img .pics {
-  width: 200px;
-  height: 300px;
+section .popup-forms-2 input {
+  padding: 7px 30px;
+  border: none;
+  background-color: rgb(219, 219, 219);
+  border-radius: 10px;
 }
-.top-5-films .popular-img .faw-pic {
-  width: 200px;
-  height: 300px;
-  border-radius: 5px;
+section .popup-forms-2 #input-date-2 {
+  padding: 7px 60px;
+}
+section .popup-forms-2 button {
+  padding: 7px 60px;
+  border: none;
+  background-color: rgb(87, 87, 218);
+  color: white;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: Roboto;
+  cursor: pointer;
+}
+section .popup-forms-2 button:hover {
+  scale: 0.95;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
