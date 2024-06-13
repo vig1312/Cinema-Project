@@ -19,7 +19,7 @@ document.getElementById("writer").innerHTML = writer;
 // checking if person is registered or not
 
  function onLoad() {
-    const users =  JSON.parse(localStorage.getItem("registeredUsers"))
+    const users =  JSON.parse(localStorage.getItem("loginUser"))
 
     if(users.length !== 0 ) {
         document.querySelector(".navigation-logup").style.display =  "none";
@@ -28,7 +28,7 @@ document.getElementById("writer").innerHTML = writer;
 
 //creating the tickets container 
 
-const members = JSON.parse(localStorage.getItem("registeredUsers"))
+const members = JSON.parse(localStorage.getItem("loginUser"))
 const booking = document.querySelector(".booking");
 
 if(members === null) {
@@ -53,7 +53,7 @@ for (let i = 1; i <= 50; i++) {
         if (approve && !(members[0].tickets.captainMiller.includes(i))) {
             container.style.backgroundColor = "red";
             members[0].tickets.captainMiller.push(i)
-            localStorage.setItem("registeredUsers",JSON.stringify(members))
+            localStorage.setItem("loginUser",JSON.stringify(members))
         }
     
     })

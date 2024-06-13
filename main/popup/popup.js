@@ -3,7 +3,12 @@ const inputPassword = document.getElementById("input-password");
 const inputDate = document.getElementById("input-date");
 const submitButton = document.getElementById("popup-submit");
 
-let users = [];
+
+if(localStorage.getItem("registeredUsers") === null) {
+    localStorage.setItem("registeredUsers", JSON.stringify([])); 
+}
+
+let users = JSON.parse(localStorage.getItem("registeredUsers"));
 
 submitButton.addEventListener("click",function() {
     return new Promise(function(resolve,reject) {
