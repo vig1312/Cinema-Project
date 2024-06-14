@@ -7,11 +7,22 @@
 
 :root {
   --width: 70%;
+  --bg-color: #fae3d9;
+  --cont-bg-color: white;
+  --black-font: black;
+  --nav-list-font:rgb(177, 177, 177);
+}
+
+.dark-theme {
+  --bg-color: #fae3d9;
+  --cont-bg-color: rgba(46, 46, 46 , 0.8);
+  --black-font: white;
+  --nav-list-font:rgb(214, 214, 214);
 }
 
 body {
   font-family: Roboto;
-  background-color: #fae3d9;
+  background-color: var(--bg-color);
 }
 
 header {
@@ -60,13 +71,13 @@ nav .navigation-lists ul li:hover {
 }
 nav .navigation-lists ul li a {
   text-decoration: none;
-  color: rgb(177, 177, 177);
+  color: var(--nav-list-font);
   font-size: 1.3rem;
   font-family: Roboto;
 }
 nav .navigation-lists ul li a:hover {
   scale: 1.1;
-  color: black;
+  color: var(--black-font);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -131,7 +142,7 @@ nav .navigation-logout a {
 .container {
   width: var(--width);
   height: 200vh;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.99);
   margin: auto;
   padding: 5px 40px;
 }
@@ -155,6 +166,9 @@ nav .navigation-logout a {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.875rem;
+}
+.top-5-films h1 {
+  color: var(--black-font);
 }
 .top-5-films .popular-img {
   width: 100%;

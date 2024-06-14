@@ -32,27 +32,30 @@ const members = JSON.parse(localStorage.getItem("loginUser"))
 const booking = document.querySelector(".booking");
 
 if(members === null) {
+    
     alert("Register for first")
     throw new Error("Register for First")
+
 } else {
-    members[0].tickets.captainMiller = [...members[0].tickets.captainMiller]
+    members.tickets.captainMiller = [...members.tickets.captainMiller]
 }
 
 for (let i = 1; i <= 50; i++) {
     const container = document.createElement("div");
     
-    if((members[0].tickets.captainMiller.includes(i))) {
+    if((members.tickets.captainMiller.includes(i))) {
         container.style.backgroundColor = "red"
     }
     
     container.classList.add("boxes");
     container.innerHTML = `${i}`
     container.addEventListener("click", function(){
+        
         const approve = confirm(`Do you want to buy ${i} ticket?`)
 
-        if (approve && !(members[0].tickets.captainMiller.includes(i))) {
+        if (approve && !(members.tickets.captainMiller.includes(i))) {
             container.style.backgroundColor = "red";
-            members[0].tickets.captainMiller.push(i)
+            members.tickets.captainMiller.push(i)
             localStorage.setItem("loginUser",JSON.stringify(members))
         }
     
