@@ -9,7 +9,7 @@ if(localStorage.getItem("registeredUsers") === null) {
 
 let users = JSON.parse(localStorage.getItem("registeredUsers"));
 
-submitButton.addEventListener("click",function() {
+submitButton.addEventListener("click", function() {
     return new Promise(function(resolve,reject) {
         const usernameRegexp = /^\w+$/;
         const passwordRegexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
@@ -20,6 +20,7 @@ submitButton.addEventListener("click",function() {
                     password: inputPassword.value,
                     date: inputDate.value,
                     registered: true,
+                    language: "eng",
                     tickets: {
                         interstellar: [],
                         dunePartTwo: [],
@@ -41,9 +42,9 @@ submitButton.addEventListener("click",function() {
 })
 
 
-const regusers = JSON.parse(localStorage.getItem("registeredUsers"));
+// const regusers = JSON.parse(localStorage.getItem("registeredUsers"));
 
-if(inputUserName.value == regusers.username && inputPassword.value !== regusers.password ){
-    alert("invalid password")
-}
-console.log(regusers)
+// if(inputUserName.value == regusers.username && inputPassword.value !== regusers.password ){
+//     alert("invalid password")
+// }
+// console.log(regusers)

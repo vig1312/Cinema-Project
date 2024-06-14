@@ -17,55 +17,69 @@
         <nav>
             <div class="navigation-lists">
                 <ul>
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">Top Films</a></li>
-                    <li><a href="#">Advanced Films</a></li>
-                    <li><a href="#">More...</a></li>
+                    <li id="main"><a href="#">Main</a></li>
+                    <li id="topFilms"><a href="#">Top Films</a></li>
+                    <li id="advacedFilms"><a href="#">Advanced Films</a></li>
+                    <li id="more"><a href="#">More...</a></li>
                 </ul>
             </div>
-    
-            <div class="navigation-logup">
-                <a class="logUp" href="./popup/popup.html">Log up</a>
+            <div class="navigation-popup">
+                <div class="navigation-logup">
+                    <a href="./popup/popup.html" id="log-up">Log up</a>
+                </div>
+                <div class="navigation-login">
+                    <a href="./login/login.html" id="log-in">Log in</a>
+                </div>
+                <div class="navigation-logout">
+                    <a href="" id="log-out">Log out</a>
+                </div>
             </div>
         </nav>
         <div class="top-5-films">
-            <h1>Popular</h1>
+            <h1 id="popular">Popular</h1>
             <div class="popular-img">
                 <div class="pics">
                     <a href="#" style="text-decoration: none;">
                         <img class="faw-pic" src="top5/img 1.jpg">
-                        <p>Dune: Part Two</p>
+                        <p id="dune">Dune: Part Two</p>
                     </a>
                 </div>
                 <div class="pics">
                     <a href="./Captain-miller/captainMiller.html" style="text-decoration: none;">
                         <img class="faw-pic" src="top5/img 2.jpg">
-                        <p>Captain Miller</p>
+                        <p id="captainMiller">Captain Miller</p>
                     </a>
                 </div>
                 <div class="pics">
                     <a href="#" style="text-decoration: none;">
                         <img class="faw-pic" src="top5/img 3.jpg">
-                        <p>The Beekeeper</p>
+                        <p id="theBeekeeper">The Beekeeper</p>
                     </a>
                 </div>
                 <div class="pics">
                     <a href="#" style="text-decoration: none;">
                         <img class="faw-pic" src="top5/img 4.jpg">
-                        <p>Suriya's Kanguva</p>
+                        <p id="suryas">Suriya's Kanguva</p>
                     </a>
                 </div>
                 <div class="pics">
                     <a href="./interstellar/details.html" style="text-decoration: none;">
                         <img class="faw-pic" src="top5/img 5.jpg">
-                        <p>Interstellar</p>
+                        <p id="interstellar">Interstellar</p>
                     </a>
                 </div>
             </div>
         </div>
     </div>
     <div class="advanced-films"></div>
-    <footer></footer>
-    <script src="main.js"></script>    
+    <footer>
+        <button id="english">Eng</button>
+        <button id="russian">Rus</button>
+        <button id="german">Ger</button>
+
+
+    </footer>
+    <script src="main.js"></script>
+    <script src="translate.js"></script>    
 </body>
 </html>

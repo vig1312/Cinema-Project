@@ -68,7 +68,50 @@ nav {
         }
     }
 
+    .navigation-popup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
     .navigation-logup {
+        background-color: rgb(87, 87, 218);
+        padding: 5px 40px ;
+        border-radius: 10px;
+
+        &:hover {
+            scale: 1.1;
+            transition: 0.2s;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: Roboto;
+            
+        }
+    }
+
+    .navigation-login {
+        background-color: rgb(87, 87, 218);
+        padding: 5px 40px ;
+        border-radius: 10px;
+
+        &:hover {
+            scale: 1.1;
+            transition: 0.2s;
+        }
+        
+        a {
+            text-decoration: none;
+            color: white;
+            font-family: Roboto;
+            
+        }
+    }
+
+    .navigation-logout {
         background-color: rgb(87, 87, 218);
         padding: 5px 40px ;
         border-radius: 10px;
