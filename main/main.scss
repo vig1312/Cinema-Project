@@ -155,13 +155,16 @@ nav {
 
     .popular-img{
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
         gap: 10px;
+
+        .films-href {
+            text-decoration: none;
+            color: black;
+        }
         .pics{
-            width: 200px;
-            height: 300px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .faw-pic{
             width: 200px;
