@@ -5,7 +5,7 @@ const rus = {
             topFilms: "лучшие фильмы",
             advacedFilms: "Продвинутые фильмы",
             more: "Более",
-            logUp: "Войти"
+            logOut: "Выйти"
         },
         popular: "Популярный",
         interstellar: "интерстеллар",
