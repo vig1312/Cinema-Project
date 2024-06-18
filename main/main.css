@@ -158,19 +158,22 @@ nav .navigation-logout a {
 }
 .top-5-films .popular-img {
   width: 100%;
+  gap: 10px;
+}
+.top-5-films .popular-img .films-href {
+  text-decoration: none;
+  color: black;
+}
+.top-5-films .popular-img .pics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 10px;
-}
-.top-5-films .popular-img .pics {
-  width: 200px;
-  height: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .top-5-films .popular-img .faw-pic {
   width: 200px;

@@ -2,8 +2,11 @@ const logOutbtn = document.getElementById("log-out");
 const logUp = document.querySelector(".navigation-logup");
 const logIn = document.querySelector(".navigation-login");
 const logOut =  document.querySelector(".navigation-logout")
-
+const topFilms = document.querySelector(".top-5-films")
 const users = JSON.parse(localStorage.getItem("loginUser"))
+
+
+//const users = JSON.parse(localStorage.getItem("loginUser"))
 
 function onLoad() {
 
@@ -19,34 +22,29 @@ function onLoad() {
 }
 
 logOutbtn.addEventListener("click",function() {
+    const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
+    const regUserIndex = regUsers.findIndex((member) => 
+        {return member.username == users.username && member.password == users.password}
+    )
+    regUsers[regUserIndex] = users
+
+    localStorage.setItem("registeredUsers",JSON.stringify(regUsers))
     localStorage.removeItem("loginUser")
 })
 
 
 
-const changeRus = document.getElementById("russian");
-
-changeRus.addEventListener("click", function(){
-    localStorage.setItem(JSON.stringify("loginuser", users.language = "rus"));
-    document.getElementById("main").innerText = rus.header.navigationList.main;
-    document.getElementById("topFilms").innerHTML = rus.header.navigationList.topFilms;
-    document.getElementById("log-out").innerHTML = rus.header.navigationList.logOut;
-    
-})
-
 function filmList(film) {
     const container = document.createElement("div");
 
     container.innerHTML = `
-        <a>
-            <img src="${film.img}">
+        <a href="movies.html?name=${film.href}" class="films-href" film-data-id="${film.id}">
+            <img src="${film.img}" class="faw-pic">
             <p>${film.name}</p>
         </a>
     `
 
-    // document.querySelector("img").classList.add("")
-
-    // return container
+    return container
 }
 
 function filmBox(films) {
@@ -64,34 +62,50 @@ function filmBox(films) {
 
 function top5Films() {
     const container = document.createElement("div")
+    container.classList.add("popular-img")
 
     const top5FilmsData = [
         {
             id:1,
-            name: "Interstellar",
-            href: "movies/interstellar",
-            img: "top5/img 5.jpg",
+            name: "Dune: Part Two",
+            href: "DunePartTwo",
+            img: "top5/img 1.jpg",
             
         },
         {
             id:2,
             name: "Captain Miller",
-            href: "movies/CaptainMiller",
+            href: "CaptainMiller",
             img: "top5/img 2.jpg",
             
         },
         {
             id:3,
             name: "The Beekeeper",
-            href: "movies/theBeekeeper",
+            href: "theBeekeeper",
             img: "top5/img 3.jpg",
+            
+        },
+        {
+            id:4,
+            name: "Suriya's Kanguva",
+            href: "SuiriyasKanguva",
+            img: "top5/img 4.jpg",
+            
+        },
+        {
+            id:5,
+            name: "Interstellar",
+            href: "Interstellar",
+            img: "top5/img 5.jpg",
             
         },
     ]
 
-    container.appendChild(filmBox(top5FilmsData));
+    container.appendChild(filmBox(top5FilmsData))
+    // history.pushState(null,'',`#${encodeURIComponent(top5FilmsData[0].href)}`)
 
     return container;
 }
 
-top5Films.appendChild(top5Films())
+topFilms.appendChild(top5Films())
