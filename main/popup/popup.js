@@ -18,16 +18,11 @@ submitButton.addEventListener("click",function() {
                 username: inputUserName.value,
                 password: inputPassword.value,
                 date: inputDate.value,
-                registered: true,
+                isRegistered: true,
                 theme: "ligth",
-                tickets: {
-                    interstellar: [],
-                    dunePartTwo: [],
-                    captainMiller: [],
-                    theBeekeeper: [],
-                    suriyasKanguva: []
-                }
+                tickets: {}
             })
+
             localStorage.setItem("registeredUsers",JSON.stringify(users))
         }
         

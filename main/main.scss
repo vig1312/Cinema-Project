@@ -10,7 +10,7 @@
 
 body {
     font-family: Roboto;
-    background-color: var(--bg-color);
+    background-color: #fae3d9;
 }
 
 header {
@@ -54,13 +54,13 @@ nav {
 
                 a {
                     text-decoration: none ;
-                    color: var(--nav-list-font);
+                    color: rgb(177, 177, 177);
                     font-size: 1.3rem;
                     font-family: Roboto;
 
                     &:hover {
                         scale: 1.1;
-                        color: var(--black-font);
+                        color: black;
                         transition: 0.2s;
                     }
                 }
@@ -172,4 +172,10 @@ nav {
             border-radius: 5px;
         }
     }
+}
+
+.faw-pic {
+    width: 25%;
+    height: 500px;
+    border-radius: 5px;
 }

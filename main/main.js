@@ -3,12 +3,12 @@ const logUp = document.querySelector(".navigation-logup");
 const logIn = document.querySelector(".navigation-login");
 const logOut =  document.querySelector(".navigation-logout")
 const topFilms = document.querySelector(".top-5-films")
-const users = JSON.parse(localStorage.getItem("loginUser"))
+const user = JSON.parse(localStorage.getItem("loginUser")) 
 
 
 function onLoad() {
 
-    if((users !== null)) {
+    if((user !== null)) {
         logUp.style.display = "none";
         logIn.style.display = "none";
         logOut.style.display = "flex";
@@ -22,21 +22,22 @@ function onLoad() {
 logOutbtn.addEventListener("click",function() {
     const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
     const regUserIndex = regUsers.findIndex((member) => 
-        {return member.username == users.username && member.password == users.password}
+        member.username == user.username && member.password == user.password
     )
-    regUsers[regUserIndex] = users
+    regUsers[regUserIndex] = user
 
     localStorage.setItem("registeredUsers",JSON.stringify(regUsers))
     localStorage.removeItem("loginUser")
 })
 
 
+// Creating top 5 films list 
 
 function filmList(film) {
     const container = document.createElement("div");
 
     container.innerHTML = `
-        <a href="${film.href}" class="films-href">
+        <a href="" class="films-href">
             <img src="${film.img}" class="faw-pic">
             <p>${film.name}</p>
         </a>
@@ -66,7 +67,7 @@ function top5Films() {
         {
             id:1,
             name: "Dune: Part Two",
-            href: "movies/DunePartTwo",
+            href: "DunePartTwo",
             img: "top5/img 1.jpg",
             
         },
@@ -97,7 +98,7 @@ function top5Films() {
             href: "movies/Interstellar",
             img: "top5/img 5.jpg",
             
-        },
+        }
     ]
 
     container.appendChild(filmBox(top5FilmsData))

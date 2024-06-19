@@ -11,7 +11,7 @@
 
 body {
   font-family: Roboto;
-  background-color: var(--bg-color);
+  background-color: #fae3d9;
 }
 
 header {
@@ -60,13 +60,13 @@ nav .navigation-lists ul li:hover {
 }
 nav .navigation-lists ul li a {
   text-decoration: none;
-  color: var(--nav-list-font);
+  color: rgb(177, 177, 177);
   font-size: 1.3rem;
   font-family: Roboto;
 }
 nav .navigation-lists ul li a:hover {
   scale: 1.1;
-  color: var(--black-font);
+  color: black;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -181,5 +181,11 @@ nav .navigation-logout a {
 .top-5-films .popular-img .faw-pic {
   width: 200px;
   height: 300px;
+  border-radius: 5px;
+}
+
+.faw-pic {
+  width: 25%;
+  height: 500px;
   border-radius: 5px;
 }
