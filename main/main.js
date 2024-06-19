@@ -6,6 +6,8 @@ const topFilms = document.querySelector(".top-5-films")
 const user = JSON.parse(localStorage.getItem("loginUser")) 
 
 
+//const users = JSON.parse(localStorage.getItem("loginUser"))
+
 function onLoad() {
 
     if((user !== null)) {
@@ -35,9 +37,8 @@ logOutbtn.addEventListener("click",function() {
 
 function filmList(film) {
     const container = document.createElement("div");
-
     container.innerHTML = `
-        <a href="" class="films-href">
+        <a href="movies.html#${film.href}" class="films-href" film-data-id="${film.id}">
             <img src="${film.img}" class="faw-pic">
             <p>${film.name}</p>
         </a>
@@ -74,28 +75,28 @@ function top5Films() {
         {
             id:2,
             name: "Captain Miller",
-            href: "movies/CaptainMiller",
+            href: "CaptainMiller",
             img: "top5/img 2.jpg",
             
         },
         {
             id:3,
             name: "The Beekeeper",
-            href: "movies/theBeekeeper",
+            href: "theBeekeeper",
             img: "top5/img 3.jpg",
             
         },
         {
             id:4,
             name: "Suriya's Kanguva",
-            href: "movies/SuiriyasKanguva",
+            href: "SuiriyasKanguva",
             img: "top5/img 4.jpg",
             
         },
         {
             id:5,
             name: "Interstellar",
-            href: "movies/Interstellar",
+            href: "Interstellar",
             img: "top5/img 5.jpg",
             
         }
