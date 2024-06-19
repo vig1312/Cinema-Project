@@ -36,9 +36,8 @@ logOutbtn.addEventListener("click",function() {
 
 function filmList(film) {
     const container = document.createElement("div");
-
     container.innerHTML = `
-        <a href="movies.html?name=${film.href}" class="films-href" film-data-id="${film.id}">
+        <a href="movies.html#${film.href}" class="films-href" film-data-id="${film.id}">
             <img src="${film.img}" class="faw-pic">
             <p>${film.name}</p>
         </a>
@@ -103,7 +102,6 @@ function top5Films() {
     ]
 
     container.appendChild(filmBox(top5FilmsData))
-    // history.pushState(null,'',`#${encodeURIComponent(top5FilmsData[0].href)}`)
 
     return container;
 }
