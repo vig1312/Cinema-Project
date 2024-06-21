@@ -8,6 +8,10 @@ const currWriter = document.getElementById("writer");
 const currPic = document.getElementById("film-img");
 const currDescription = document.getElementById("film-desc");
 const currIframe = document.getElementById("iframe");
+const booking = document.getElementById("booking")
+const logedUserData = JSON.parse(localStorage.getItem("loginUser"))
+
+logedUserData !== null ? document.querySelector(".navigation-logup").style.display = "none" : document.querySelector(".navigation-logup").style.display = "flex"
    
 const moviesData = [
     {   
@@ -99,3 +103,41 @@ currYear.innerHTML = year;
 currPic.src = img;
 currDescription.innerHTML = description;
 currIframe.src = trailerURL;
+
+
+
+    if(logedUserData !== null) {
+
+            for(let i = 1;i <= 50;i++) {
+                const container = document.createElement("div");
+                container.classList.add("boxes")
+                container.innerHTML = i;
+                
+                if(logedUserData.tickets[filmName].includes(i)) {
+                        container.style.backgroundColor = "red"
+                }
+
+                container.addEventListener("click",function() {
+                    const approve = confirm(`You want to buy ${i}'s ticket?`) 
+                    
+                    if (approve && !(logedUserData.tickets[filmName].includes(i))) {
+                        container.style.backgroundColor = "red";
+                        logedUserData.tickets[filmName].push(i)
+                        localStorage.setItem("loginUser",JSON.stringify(logedUserData))
+                    } else {
+                        alert("Canceled")
+                    }
+
+                })
+
+                booking.appendChild(container)
+
+            }
+
+    } else {
+        const message = document.createElement("a");
+        message.innerHTML = "Log in to buy a tickets"
+        message.href = "login/login.html"
+
+        booking.appendChild(message)
+    }

@@ -5,7 +5,6 @@ const submitButton = document.getElementById("popup-submit");
 
 const users = "registeredUsers" in localStorage ? JSON.parse(localStorage.getItem("registeredUsers")) : [];
 
-// const users = JSON.parse(localStorage.getItem("registeredUsers"));
 
 submitButton.addEventListener("click",function() {
 
@@ -20,10 +19,14 @@ submitButton.addEventListener("click",function() {
                 date: inputDate.value,
                 isRegistered: true,
                 theme: "ligth",
-                tickets: {}
+                tickets: {
+
+                }
             })
 
             localStorage.setItem("registeredUsers",JSON.stringify(users))
+            document.location.href = "../login/login.html"
+
         }
         
         else {
