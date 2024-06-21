@@ -15,8 +15,8 @@ submitButton2.addEventListener("click",function() {
             localStorage.setItem("loginUser",JSON.stringify(loginUser))
             alert(`Log in done Succesfully,Hello ${loginUser.username}`)
         } 
-            else {
-                alert("Not correct login or Password");
-            }
+        else {
+            alert("Not correct login or Password");
+        }
 
     })

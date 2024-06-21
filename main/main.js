@@ -1,11 +1,11 @@
 const logOutbtn = document.getElementById("log-out");
 const logUp = document.querySelector(".navigation-logup");
 const logIn = document.querySelector(".navigation-login");
-const logOut =  document.querySelector(".navigation-logout")
-const topFilms = document.querySelector(".top-5-films")
-const users = JSON.parse(localStorage.getItem("loginUser"))
-
-
+const logOut =  document.querySelector(".navigation-logout");
+const topFilms = document.querySelector(".top-5-films");
+const users = JSON.parse(localStorage.getItem("loginUser"));
+const btnRus = document.getElementById("rus");
+const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
 //const users = JSON.parse(localStorage.getItem("loginUser"))
 
 function onLoad() {
@@ -22,14 +22,13 @@ function onLoad() {
 }
 
 logOutbtn.addEventListener("click",function() {
-    const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
     const regUserIndex = regUsers.findIndex((member) => 
         {return member.username == users.username && member.password == users.password}
     )
-    regUsers[regUserIndex] = users
+    regUsers[regUserIndex] = users;
 
-    localStorage.setItem("registeredUsers",JSON.stringify(regUsers))
-    localStorage.removeItem("loginUser")
+    localStorage.setItem("registeredUsers",JSON.stringify(regUsers));
+    localStorage.removeItem("loginUser");
 })
 
 
@@ -43,25 +42,25 @@ function filmList(film) {
         </a>
     `
 
-    return container
+    return container;
 }
 
 function filmBox(films) {
     const container = document.createElement("div");
-    container.classList.add("pics")
+    container.classList.add("pics");
 
     films.map((film) => {
-        return filmList(film)
+        return filmList(film);
     }).forEach((el) => {
-        container.appendChild(el)
+        container.appendChild(el);
     })
 
     return container;
 }
 
 function top5Films() {
-    const container = document.createElement("div")
-    container.classList.add("popular-img")
+    const container = document.createElement("div");
+    container.classList.add("popular-img");
 
     const top5FilmsData = [
         {
@@ -107,3 +106,7 @@ function top5Films() {
 }
 
 topFilms.appendChild(top5Films())
+
+btnRus.onclick = function(){
+    localStorage.setItem(JSON.stringify("login"))
+}

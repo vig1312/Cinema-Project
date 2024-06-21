@@ -34,6 +34,7 @@ submitButton.addEventListener("click",function() {
         
         else {
             alert("invalid Registration");
+            
         }
     })
 
