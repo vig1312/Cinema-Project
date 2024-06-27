@@ -6,13 +6,36 @@
 
 :root{
     --width: 70%;
+    --bg-color: grey;
 }
 
+
+.dark-mode {
+    background-color: #534944;
+    
+    .container{
+        background-color: black;
+    }
+    header{
+        color: white;
+        border-color: white;
+
+    }
+    .top-5-films{
+        background-color: black;
+    }
+    .popular{
+        color: white;
+    }
+    p{
+        color: white;
+    }
+  
+}
 body {
     font-family: Roboto;
     background-color: #fae3d9;
 }
-
 header {
     border: 1px solid black;
     padding: 10px;

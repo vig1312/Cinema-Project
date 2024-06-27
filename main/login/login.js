@@ -47,7 +47,7 @@ const films = [
     },
     {
         id:4,
-        name: "SuiriyasKanguva",
+        name: "SuriyasKanguva",
         img: "top5/img 4.jpg",
         description: "The film was reannounced in August that year with the tentative title Suriya 42 as it became Suriya's 42nd film in a leading role. Principal photography commenced that month in Chennai and ended in January 2024. It was filmed in various locations including Goa, Kerala, Kodaikanal and Rajahmundry. The title Kanguva was announced in April 2023. The technical crew includes Devi Sri Prasad, Vetri Palanisamy and Nishadh Yusuf, as music composer, cinematographer and editor, respectively. Made on a budget of around ₹300–350 crore, Kanguva is one of the most expensive Indian films to date",
         year: "2024",

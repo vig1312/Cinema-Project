@@ -4,9 +4,62 @@ const logIn = document.querySelector(".navigation-login");
 const logOut =  document.querySelector(".navigation-logout")
 const topFilms = document.querySelector(".top-5-films")
 const user = JSON.parse(localStorage.getItem("loginUser")) 
+const regUsers = JSON.parse(localStorage.getItem("registeredUsers"))
+const darkMode = document.getElementById("darkMode");
+const nav = document.getElementById("nav-list");
+const searchParams = new URLSearchParams(window.location.search);
 
+//searchParams.set("lan", "rus");
+//window.location.search = searchParams.toString();
+const language = [
+    {
+        lang: "rus",
+        main: "Меню",
+        topFilms: "Лучшие Фильмы",
+        advacedFilms: "Продвинутые Фильмы",
+        more: "Более...",
+        logOut: "Выйти"
+    },
+    {
+        lang: "eng",
+        main: "Main",
+        topFilms: "Top Films",
+        advacedFilms: "Advaced Films",
+        more: "More..."
+    }
+];
 
-//const users = JSON.parse(localStorage.getItem("loginUser"))
+const pageLan = searchParams.get("lan");
+const currObj = language.find(item => item.lang === pageLan);
+const container = document.createElement("div");
+container.classList.add("navigation-lists");
+container.innerHTML = `
+    <ul>
+        <li><a href="#">${currObj.main}</a></li>
+        <li><a href="#">${currObj.topFilms}</a></li>
+        <li><a href="#">${currObj.advacedFilms}</a></li>
+        <li><a href="#">${currObj.more}</a></li>
+    </ul>
+
+`
+nav.appendChild(container);
+
+const btnRus = document.getElementById("rus");
+btnRus.addEventListener("click", function() {
+    
+    searchParams.set("lan", "rus");
+    window.location.search = searchParams.toString();
+    
+   
+    
+})
+
+const btnEng = document.getElementById("eng");
+btnEng.addEventListener("click", function() {
+    searchParams.set("lan", "eng");
+    window.location.search = searchParams.toString();
+})
+
 
 function onLoad() {
 
@@ -19,27 +72,26 @@ function onLoad() {
         logIn.style.display = "flex";
         logOut.style.display = "none";
     }
+
+
 }
 
 logOutbtn.addEventListener("click",function() {
     localStorage.removeItem("loginUser")
 })
 
-
-// Creating top 5 films list 
-
 function filmList(film) {
-    return `
-            <a href="movies.html#${film.href}" class="films-href" film-data-id="${film.id}">
-                <img src="${film.img}" class="faw-pic">
-                <p>${film.name}</p>
-            </a>
-        `
+    return`
+        <a href="movies.html#${film.href}#${pageLan}" class="films-href" film-data-id="${film.id}">
+            <img src="${film.img}" class="faw-pic">
+            <p>${film.name}</p>
+        </a>
+    `
 }
 
 function filmBox(films) {
     const container = document.createElement("div");
-    container.classList.add("pics")
+    container.classList.add("pics");
 
     films.forEach((film) => {
         container.innerHTML += filmList(film)
@@ -49,8 +101,8 @@ function filmBox(films) {
 }
 
 function top5Films() {
-    const container = document.createElement("div")
-    container.classList.add("popular-img")
+    const container = document.createElement("div");
+    container.classList.add("popular-img");
 
     const top5FilmsData = [
         {
@@ -77,7 +129,7 @@ function top5Films() {
         {
             id:4,
             name: "Suriya's Kanguva",
-            href: "SuiriyasKanguva",
+            href: "SuriyasKanguva",
             img: "top5/img 4.jpg",
             
         },
@@ -96,3 +148,8 @@ function top5Films() {
 }
 
 topFilms.appendChild(top5Films())
+
+darkMode.addEventListener("click", function() {
+    const element = document.body;
+    element.classList.toggle("dark-mode");
+})

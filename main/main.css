@@ -7,6 +7,27 @@
 
 :root {
   --width: 70%;
+  --bg-color: grey;
+}
+
+.dark-mode {
+  background-color: #534944;
+}
+.dark-mode .container {
+  background-color: black;
+}
+.dark-mode header {
+  color: white;
+  border-color: white;
+}
+.dark-mode .top-5-films {
+  background-color: black;
+}
+.dark-mode .popular {
+  color: white;
+}
+.dark-mode p {
+  color: white;
 }
 
 body {
