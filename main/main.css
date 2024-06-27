@@ -7,6 +7,27 @@
 
 :root {
   --width: 70%;
+  --bg-color: grey;
+}
+
+.dark-mode {
+  background-color: #534944;
+}
+.dark-mode .container {
+  background-color: black;
+}
+.dark-mode header {
+  color: white;
+  border-color: white;
+}
+.dark-mode .top-5-films {
+  background-color: black;
+}
+.dark-mode .popular {
+  color: white;
+}
+.dark-mode p {
+  color: white;
 }
 
 body {
@@ -131,7 +152,7 @@ nav .navigation-logout a {
 .container {
   width: var(--width);
   height: 200vh;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.99);
   margin: auto;
   padding: 5px 40px;
 }
@@ -156,6 +177,9 @@ nav .navigation-logout a {
           flex-direction: column;
   gap: 1.875rem;
 }
+.top-5-films h1 {
+  color: var(--black-font);
+}
 .top-5-films .popular-img {
   width: 100%;
   gap: 10px;
@@ -178,5 +202,11 @@ nav .navigation-logout a {
 .top-5-films .popular-img .faw-pic {
   width: 200px;
   height: 300px;
+  border-radius: 5px;
+}
+
+.faw-pic {
+  width: 25%;
+  height: 500px;
   border-radius: 5px;
 }

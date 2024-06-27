@@ -5,7 +5,6 @@ const submitButton = document.getElementById("popup-submit");
 
 const users = "registeredUsers" in localStorage ? JSON.parse(localStorage.getItem("registeredUsers")) : [];
 
-// const users = JSON.parse(localStorage.getItem("registeredUsers"));
 
 submitButton.addEventListener("click",function() {
 
@@ -18,18 +17,17 @@ submitButton.addEventListener("click",function() {
                 username: inputUserName.value,
                 password: inputPassword.value,
                 date: inputDate.value,
-                registered: true,
+                isRegistered: true,
                 theme: "ligth",
                 language: "eng",
                 tickets: {
-                    interstellar: [],
-                    dunePartTwo: [],
-                    captainMiller: [],
-                    theBeekeeper: [],
-                    suriyasKanguva: []
+
                 }
             })
+
             localStorage.setItem("registeredUsers",JSON.stringify(users))
+            document.location.href = "../login/login.html"
+
         }
         
         else {

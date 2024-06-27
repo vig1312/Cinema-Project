@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +12,8 @@
 
 <body>
   <div class="container">
-    <nav>
-    <div class="navigation-lists">
-      <ul>
-        <li><a href="main.html">Main</a></li>
-        <li><a href="#">Top Films</a></li>
-        <li><a href="#">Advanced Films</a></li>
-        <li><a href="#">More...</a></li>
-      </ul>
-    </div>
+    <nav >
+      <div id="nav"></div>
     <div class="navigation-logup">
       <a href="popup/popup.html">Log up</a>
     </div>
@@ -31,41 +23,39 @@
       <img id="film-img">
       <table>
         <tr>
-          <td class="table-key">Year :</td>
-          <td id="year"></td>
+          <td class="table-key" id="year"></td>
+          <td id="year-value"></td>
         </tr>
         <tr>
-          <td class="table-key">Country :</td>
-          <td id="country"></td>
+          <td class="table-key" id="country"></td>
+          <td id="country-value"></td>
         </tr>
         <tr>
-          <td class="table-key">Genre :</td>
-          <td id="genre"></td>
+          <td class="table-key" id="genre"></td>
+          <td id="genre-value"></td>
         </tr>
         <tr>
-          <td class="table-key">Director :</td>
-          <td id="director"></td>
+          <td class="table-key" id="director"></td>
+          <td id="director-value"></td>
         </tr>
         <tr>
-          <td class="table-key">Producer :</td>
-          <td id="producer"></td>
+          <td class="table-key" id="producer"></td>
+          <td id="producer-value"></td>
         </tr>
         <tr>
-          <td class="table-key">Writer :</td>
-          <td id="writer"></td>
+          <td class="table-key" id="writer"></td>
+          <td id="writer-value"></td>
         </tr>
       </table>
     </div>
     <div class="description">
-      <h3>description</h3>
-      <p id="film-desc"></p>
+      <h3 id="description">description</h3>
+      <p id="film-desc-value"></p>
     </div>
     <iframe id="iframe" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
      web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <div class="booking">
-      
+    <div id="booking"></div>
   </div>
-  <!-- <script src="main.js" ></script> -->
   <script src="translate.js"></script>
   <script src="movies.js"></script>
 
