@@ -73,46 +73,67 @@ const films = [
         genre: "action,adventure"
         
     }
-]
+] 
+ const tickets = {}
+
+ if(!("reservedTickets" in localStorage)) {
+    
+        films.forEach(film => Object.defineProperty(tickets,`${film.name}`, {
+
+            value: {},
+            enumerable: true,
+            configurable:true,
+            writable: true
+
+        }
+      )
+    )
+    
+    localStorage.setItem("reservedTickets",JSON.stringify(tickets))
+ }
+
 
 
 submitButton2.addEventListener("click",function() {
 
-    const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
+        const message = document.getElementById("message")
+        message.classList.add("err-message")
 
-    const loginUser = regUsers.find((member) => {
-        return member.username == inputUserName2.value && member.password == inputPassword2.value
-    })
+        try {
 
-        if(loginUser) {
-            // creating all the exist films array in logged user object
-
-            if(Object.keys(loginUser.tickets).length === 0) {
+            const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
   
-                    films.forEach(film => Object.defineProperty(loginUser.tickets,`${film.name}`, {
+            if("registeredUsers" in localStorage) {
+                const loginUser = regUsers.find((member) => {
+                return member.username == inputUserName2.value && member.password == inputPassword2.value
+            })
+        
+                if(loginUser) {
+                    // creating all the exist films array in logged user object 
+        
+                    localStorage.setItem("loginUser",JSON.stringify(loginUser))
+                    
+                    alert(`Log in done Succesfully,Hello ${loginUser.username}`)
+        
+                    // redirect to new locationz
+        
+                     document.location.href = "../main.html"
+          
+                    } 
+        
+                    else {
+                        throw new Error("Not correct login or Password");
+                    }
+        
+                 } 
+                 
+                 else {
+                    throw new Error("you haven't registered yet")
+                 }
+        }
 
-                        value: [],
-                        writable: true,
-                        enumerable: true,
-                        configurable: true
-
-                 }  
-                )
-              ) 
-            } 
-
-            localStorage.setItem("loginUser",JSON.stringify(loginUser))
-            
-            alert(`Log in done Succesfully,Hello ${loginUser.username}`)
-
-            // redirect to new locationz
-
-             document.location.href = "../main.html"
-
-            
-        } 
-            else {
-                alert("Not correct login or Password");
-            }
-
+         catch(error) {
+            message.innerHTML = error
+         }
     })
+

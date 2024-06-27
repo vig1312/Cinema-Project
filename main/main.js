@@ -22,13 +22,6 @@ function onLoad() {
 }
 
 logOutbtn.addEventListener("click",function() {
-    const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
-    const regUserIndex = regUsers.findIndex((member) => 
-        member.username == user.username && member.password == user.password
-    )
-    regUsers[regUserIndex] = user
-
-    localStorage.setItem("registeredUsers",JSON.stringify(regUsers))
     localStorage.removeItem("loginUser")
 })
 
@@ -36,25 +29,20 @@ logOutbtn.addEventListener("click",function() {
 // Creating top 5 films list 
 
 function filmList(film) {
-    const container = document.createElement("div");
-    container.innerHTML = `
-        <a href="movies.html#${film.href}" class="films-href" film-data-id="${film.id}">
-            <img src="${film.img}" class="faw-pic">
-            <p>${film.name}</p>
-        </a>
-    `
-
-    return container
+    return `
+            <a href="movies.html#${film.href}" class="films-href" film-data-id="${film.id}">
+                <img src="${film.img}" class="faw-pic">
+                <p>${film.name}</p>
+            </a>
+        `
 }
 
 function filmBox(films) {
     const container = document.createElement("div");
     container.classList.add("pics")
 
-    films.map((film) => {
-        return filmList(film)
-    }).forEach((el) => {
-        container.appendChild(el)
+    films.forEach((film) => {
+        container.innerHTML += filmList(film)
     })
 
     return container;

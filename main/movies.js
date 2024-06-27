@@ -9,9 +9,10 @@ const currPic = document.getElementById("film-img");
 const currDescription = document.getElementById("film-desc");
 const currIframe = document.getElementById("iframe");
 const booking = document.getElementById("booking")
-const logedUserData = JSON.parse(localStorage.getItem("loginUser"))
+const loggedUserData = JSON.parse(localStorage.getItem("loginUser"))
+const reservedTickets = JSON.parse(localStorage.getItem("reservedTickets"))
 
-logedUserData !== null ? document.querySelector(".navigation-logup").style.display = "none" : document.querySelector(".navigation-logup").style.display = "flex"
+loggedUserData !== null ? document.querySelector(".navigation-logup").style.display = "none" : document.querySelector(".navigation-logup").style.display = "flex"
    
 const moviesData = [
     {   
@@ -105,34 +106,48 @@ currDescription.innerHTML = description;
 currIframe.src = trailerURL;
 
 
+    if(loggedUserData !== null) {
 
-    if(logedUserData !== null) {
+            Array.from({length: 50}).map((val,i) => {
 
-            for(let i = 1;i <= 50;i++) {
                 const container = document.createElement("div");
                 container.classList.add("boxes")
                 container.innerHTML = i;
-                
-                if(logedUserData.tickets[filmName].includes(i)) {
-                        container.style.backgroundColor = "red"
+
+                if(reservedTickets[filmName].hasOwnProperty(i)) {
+                    container.style.backgroundColor = "red"
                 }
+
 
                 container.addEventListener("click",function() {
                     const approve = confirm(`You want to buy ${i}'s ticket?`) 
-                    
-                    if (approve && !(logedUserData.tickets[filmName].includes(i))) {
-                        container.style.backgroundColor = "red";
-                        logedUserData.tickets[filmName].push(i)
-                        localStorage.setItem("loginUser",JSON.stringify(logedUserData))
-                    } else {
+
+                    if((reservedTickets[filmName].hasOwnProperty(i))) {
+                        alert(`ticket is already bougth by ${reservedTickets[filmName][i]}`)
+                    }
+
+                    else if(approve) {
+
+                        container.style.backgroundColor = "red"
+
+                        Object.defineProperty(reservedTickets[filmName],`${i}`,  {
+                            value: `${loggedUserData.username}`,
+                            enumerable:true,
+                            configurable:true,
+                            writable:true,
+                        })
+                        
+
+                    } else  {
                         alert("Canceled")
                     }
 
+                    localStorage.setItem("reservedTickets",JSON.stringify(reservedTickets))
+                    
                 })
 
                 booking.appendChild(container)
-
-            }
+            })
 
     } else {
         const message = document.createElement("a");
