@@ -1,6 +1,5 @@
 body {
   font-family: ROBOTO;
-  background-image: url("../top5/img 2.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -102,11 +101,11 @@ body {
   display: block;
   margin: auto;
 }
-.container .booking {
-  background-color: rgb(203, 175, 230);
+.container #booking {
   width: 50%;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 40px;
+  margin-bottom: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,8 +118,16 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2px;
+  padding: 20px 0;
 }
-.container .booking .boxes {
+.container #booking a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 40px;
+  background-color: rgb(87, 87, 218);
+  border-radius: 10px;
+}
+.container #booking .boxes {
   width: 30px;
   height: 30px;
   background-color: rgb(148, 230, 148);

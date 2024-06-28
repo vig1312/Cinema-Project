@@ -10,19 +10,13 @@
     </style>
 </head>
 <body onload="onLoad()">
-    <div class="container">
-        <header>
+    <button id="darkMode">theme</button>
+    <div class="container" id="container">
+        <header id="header">
             <marquee behavior="scroll" direction="right" scrollamount="20">VARDANYAN'S CINEMA</marquee>
         </header>
         <nav>
-            <div class="navigation-lists">
-                <ul>
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">Top Films</a></li>
-                    <li><a href="#">Advanced Films</a></li>
-                    <li><a href="#">More...</a></li>
-                </ul>
-            </div>
+            <div id="nav-list"></div>
             <div class="navigation-popup">
                 <div class="navigation-logup">
                     <a href="./popup/popup.html" id="log-up">Log up</a>
@@ -35,44 +29,16 @@
                 </div>
             </div>
         </nav>
-        <div class="top-5-films">
-            <h1>Popular</h1>
-            <div class="popular-img">
-                <div class="pics">
-                    <a href="#" style="text-decoration: none;">
-                        <img class="faw-pic" src="top5/img 1.jpg">
-                        <p>Dune: Part Two</p>
-                    </a>
-                </div>
-                <div class="pics">
-                    <a href="./Captain-miller/captainMiller.html" style="text-decoration: none;">
-                        <img class="faw-pic" src="top5/img 2.jpg">
-                        <p>Captain Miller</p>
-                    </a>
-                </div>
-                <div class="pics">
-                    <a href="#" style="text-decoration: none;">
-                        <img class="faw-pic" src="top5/img 3.jpg">
-                        <p>The Beekeeper</p>
-                    </a>
-                </div>
-                <div class="pics">
-                    <a href="#" style="text-decoration: none;">
-                        <img class="faw-pic" src="top5/img 4.jpg">
-                        <p>Suriya's Kanguva</p>
-                    </a>
-                </div>
-                <div class="pics">
-                    <a href="./interstellar/details.html" style="text-decoration: none;">
-                        <img class="faw-pic" src="top5/img 5.jpg">
-                        <p>Interstellar</p>
-                    </a>
-                </div>
-            </div>
+        <div class="top-5-films" id="top-5-films">
+            <h1 class="popular">Popular</h1>
         </div>
     </div>
     <div class="advanced-films"></div>
-    <footer></footer>
+    <footer>
+        <button id="rus">RUS</button>
+        <button id="eng">ENG</button>
+        <button id="ger">GER</button>
+    </footer>
     <script src="main.js"></script>    
 </body>
 </html>

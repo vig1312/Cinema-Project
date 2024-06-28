@@ -13,7 +13,7 @@ body {
 .container {
   width: 70%;
   height: 100vh;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   margin: auto;
   padding: 5px 40px;
 }
@@ -109,8 +109,8 @@ section .popup-container-2 {
   gap: 40px;
   padding: 50px 100px;
   border-radius: 10px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fae3d9), to(rgb(240, 240, 240)));
-  background: linear-gradient(#fae3d9, rgb(240, 240, 240));
+  background: -webkit-gradient(linear, left top, left bottom, from(#fae3d9), to(rgb(223, 223, 223)));
+  background: linear-gradient(#fae3d9, rgb(223, 223, 223));
 }
 section .popup-container-2 .popup-header-2 {
   font-family: Roboto;
@@ -154,4 +154,9 @@ section .popup-forms-2 button:hover {
   scale: 0.95;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.err-message {
+  color: red;
+  text-align: center;
 }

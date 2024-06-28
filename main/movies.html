@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="movies.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav >
+      <div id="nav"></div>
+    <div class="navigation-logup">
+      <a href="popup/popup.html">Log up</a>
+    </div>
+  </nav>
+    <h2 id="header-name"></h2>
+    <div class="about">
+      <img id="film-img">
+      <table>
+        <tr>
+          <td class="table-key" id="year"></td>
+          <td id="year-value"></td>
+        </tr>
+        <tr>
+          <td class="table-key" id="country"></td>
+          <td id="country-value"></td>
+        </tr>
+        <tr>
+          <td class="table-key" id="genre"></td>
+          <td id="genre-value"></td>
+        </tr>
+        <tr>
+          <td class="table-key" id="director"></td>
+          <td id="director-value"></td>
+        </tr>
+        <tr>
+          <td class="table-key" id="producer"></td>
+          <td id="producer-value"></td>
+        </tr>
+        <tr>
+          <td class="table-key" id="writer"></td>
+          <td id="writer-value"></td>
+        </tr>
+      </table>
+    </div>
+    <div class="description">
+      <h3 id="description">description</h3>
+      <p id="film-desc-value"></p>
+    </div>
+    <iframe id="iframe" width="560" height="315" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+     web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div id="booking"></div>
+  </div>
+  <script src="translate.js"></script>
+  <script src="movies.js"></script>
+
+</body>
+
+</html>

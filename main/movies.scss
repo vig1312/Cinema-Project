@@ -1,10 +1,11 @@
 body{
     font-family: ROBOTO;
-    background-image: url("../top5/img\ 5.jpg");
+    // background-image: url("top5/img\ 2.jpg");
     background-position: center;
     background-size: cover;
 }
 .container{
+    // height: 150vh;
     width: 70%;
     background-color: rgba($color: #ffffff, $alpha: 0.90);
     margin: auto;
@@ -16,28 +17,29 @@ body{
         align-items: center;
         padding: 15px;
         width: 100%;
+        // border: 1px solid black;
         .navigation-lists {
-            
+
             ul {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 30px;
-    
+
                 li {
                     list-style-type: none;
                     &:hover {
                         scale: 1.1;
                         transition: 0.2s;
                     }
-                    
-    
+
+
                     a {
                         text-decoration: none ;
                         color: rgb(177, 177, 177);
                         font-size: 1.3rem;
                         font-family: Roboto;
-    
+
                         &:hover {
                             scale: 1.1;
                             color: black;
@@ -47,31 +49,31 @@ body{
                 }
             }
         }
-    
+
         .navigation-logup {
             background-color: rgb(87, 87, 218);
             padding: 5px 40px ;
             border-radius: 10px;
-    
+
             &:hover {
                 scale: 1.1;
                 transition: 0.2s;
             }
-            
+
             a {
                 text-decoration: none;
                 color: white;
                 font-family: Roboto;
-                
+
             }
         }
     }
     .about{
-        
+
         display: flex;
         justify-content: center; 
         width: 100%;
-        
+
         img{
             width: 28%;
             height: 500px;
@@ -88,24 +90,36 @@ body{
     .description {
         width: 50%;
         margin: auto;
+        margin-bottom: 70px;
     }
     iframe {
         width: 50%;
         display: block;
         margin: auto;
     }
-    .booking{
-        margin: auto;
-        background-color: rgb(203, 175, 230);
+    #booking{
+        // background-color: rgb(170, 170, 170);
         width: 50%;
-        // height: 400px;
         margin: auto;
-        margin-top: 50px;
+        margin-top: 40px;
+        margin-bottom: 90px;
+        // height: 400px;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 2px;
+        padding: 20px 0;
+        
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 40px;
+            // border: 1px solid black;
+            background-color: rgb(87, 87, 218);
+            border-radius: 10px;
+        }
+
         .boxes{
             width: 30px;
             height: 30px;
@@ -116,6 +130,4 @@ body{
             cursor: pointer;
         }
     }
-    
-   
 }
