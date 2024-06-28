@@ -117,7 +117,7 @@ submitButton2.addEventListener("click",function() {
         
                     // redirect to new locationz
         
-                     document.location.href = "../main.html"
+                    //  document.location.href = "../main.html"
           
                     } 
         

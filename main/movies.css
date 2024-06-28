@@ -101,10 +101,13 @@ body {
   display: block;
   margin: auto;
 }
+.container h3 {
+  text-align: center;
+}
 .container #booking {
   width: 50%;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 90px;
   display: -webkit-box;
   display: -ms-flexbox;

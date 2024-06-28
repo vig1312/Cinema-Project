@@ -8,9 +8,6 @@ const regUsers = JSON.parse(localStorage.getItem("registeredUsers"))
 const darkMode = document.getElementById("darkMode");
 const nav = document.getElementById("nav-list");
 const searchParams = new URLSearchParams(window.location.search);
-
-//searchParams.set("lan", "rus");
-//window.location.search = searchParams.toString();
 const language = [
     {
         lang: "rus",

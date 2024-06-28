@@ -82,7 +82,7 @@ nav.appendChild(container);
 
 const moviesData = [
     {   
-        id:1,
+        id: 1,
         language: "eng",
         name: "DunePartTwo",
         img: "top5/img 1.jpg",
@@ -97,7 +97,7 @@ const moviesData = [
         
     },
     {   
-        id:1,
+        id: 2,
         language: "eng",
         name: "DunePartTwo",
         language: "rus",
@@ -113,7 +113,7 @@ const moviesData = [
         
     },
     {
-        id:2,
+        id: 3,
         name: "Interstellar",
         language: "eng",
         img: "top5/img 5.jpg",
@@ -128,7 +128,7 @@ const moviesData = [
         
     },
     {
-        id:2,
+        id: 4,
         name: "Interstellar",
         language: "rus",
         img: "top5/img 5.jpg",
@@ -143,7 +143,7 @@ const moviesData = [
 
     },
     {
-        id:3,
+        id: 5,
         name: "theBeekeeper",
         language: "eng",
         img: "top5/img 3.jpg",
@@ -158,7 +158,7 @@ const moviesData = [
         
     },
     {
-        id:3,
+        id: 6,
         name: "theBeekeeper",
         language: "rus",
         img: "top5/img 3.jpg",
@@ -173,7 +173,7 @@ const moviesData = [
         
     },
     {
-        id:4,
+        id: 7,
         name: "SuriyasKanguva",
         language: "eng",
         img: "top5/img 4.jpg",
@@ -188,7 +188,7 @@ const moviesData = [
         
     },
     {
-        id:4,
+        id: 8,
         name: "SuriyasKanguva",
         language: "rus",
         img: "top5/img 4.jpg",
@@ -203,7 +203,7 @@ const moviesData = [
         
     },
     {
-        id:5,
+        id: 9,
         name: "CaptainMiller",
         language: "eng",
         img: "top5/img 2.jpg",
@@ -218,7 +218,7 @@ const moviesData = [
         
     },
     {
-        id:5,
+        id: 10,
         name: "CaptainMiller",
         language: "rus",
         img: "top5/img 2.jpg",
@@ -234,7 +234,6 @@ const moviesData = [
     },
 
 ]
-
 
 const currentFilm = moviesData.find(el => el.name === filmName && el.language === urlLanguage);
 const currentLanguageTable = tableProperty.find(el => el.lan === urlLanguage);
@@ -263,54 +262,44 @@ currIframe.src = trailerURL;
 if(loggedUserData !== null) {
 
     if(loggedUserData !== null) {
+        Array.from({length: 50}).map((val,i) => {
+            const container = document.createElement("div");
+            container.classList.add("boxes");
+            container.innerHTML = i;
 
-            Array.from({length: 50}).map((val,i) => {
-                console.log(reservedTickets[filmName])
+            if(reservedTickets[filmName].hasOwnProperty(i)) {
+                container.style.backgroundColor = "red";
+            }
 
-                const container = document.createElement("div");
-                container.classList.add("boxes")
-                container.innerHTML = i;
 
-                if(reservedTickets[filmName].hasOwnProperty(i)) {
-                    container.style.backgroundColor = "red"
+            container.addEventListener("click",function() {
+                const approve = confirm(`You want to buy ${i}'s ticket?`);
+
+                if((reservedTickets[filmName].hasOwnProperty(i))) {
+                    alert(`ticket is already bougth by ${reservedTickets[filmName][i]}`);
                 }
-
-
-                container.addEventListener("click",function() {
-                    const approve = confirm(`You want to buy ${i}'s ticket?`) 
-
-                    if((reservedTickets[filmName].hasOwnProperty(i))) {
-                        alert(`ticket is already bougth by ${reservedTickets[filmName][i]}`)
-                    }
-
-                    else if(approve) {
-
-                        container.style.backgroundColor = "red"
-
-                        Object.defineProperty(reservedTickets[filmName],`${i}`,  {
-                            value: `${loggedUserData.username}`,
-                            enumerable:true,
-                            configurable:true,
-                            writable:true,
-                        })
-                        
-
-                    } else  {
-                        alert("Canceled")
-                    }
-
-                    localStorage.setItem("reservedTickets",JSON.stringify(reservedTickets))
-                    
-                })
-
-                booking.appendChild(container)
+                else if(approve) {
+                    container.style.backgroundColor = "red";
+                    Object.defineProperty(reservedTickets[filmName],`${i}`,  {
+                        value: `${loggedUserData.username}`,
+                        enumerable:true,
+                        configurable:true,
+                        writable:true,
+                    })
+                } 
+                else  {
+                    alert("Canceled");
+                }
+                localStorage.setItem("reservedTickets",JSON.stringify(reservedTickets));
             })
-        }
+            booking.appendChild(container);
+        })
+    }
 
-} else {
+} 
+else {
     const message = document.createElement("a");
-    message.innerHTML = "Log in to buy a tickets"
-    message.href = "login/login.html"
-
-    booking.appendChild(message)
+    message.innerHTML = "Log in to buy a tickets";
+    message.href = "login/login.html";
+    booking.appendChild(message);
 }
