@@ -76,7 +76,7 @@ const films = [
 ] 
  const tickets = {}
 
- if(!("reservedTickets" in localStorage)) {
+ if (!("reservedTickets" in localStorage)) {
     
         films.forEach(film => Object.defineProperty(tickets,`${film.name}`, {
 
@@ -103,12 +103,12 @@ submitButton2.addEventListener("click",function() {
 
             const regUsers = JSON.parse(localStorage.getItem("registeredUsers"));
   
-            if("registeredUsers" in localStorage) {
+            if ("registeredUsers" in localStorage) {
                 const loginUser = regUsers.find((member) => {
                 return member.username == inputUserName2.value && member.password == inputPassword2.value
             })
         
-                if(loginUser) {
+                if (loginUser) {
                     // creating all the exist films array in logged user object 
         
                     localStorage.setItem("loginUser",JSON.stringify(loginUser))
@@ -132,7 +132,7 @@ submitButton2.addEventListener("click",function() {
                  }
         }
 
-         catch(error) {
+         catch (error) {
             message.innerHTML = error
          }
     })

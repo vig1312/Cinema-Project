@@ -260,9 +260,7 @@ currPic.src = img;
 currDescription.innerHTML = description;
 currIframe.src = trailerURL;
 
-if(loggedUserData !== null) {
-
-    if(loggedUserData !== null) {
+if  (loggedUserData !== null) {
 
             Array.from({length: 50}).map((val,i) => {
                 console.log(reservedTickets[filmName])
@@ -271,7 +269,7 @@ if(loggedUserData !== null) {
                 container.classList.add("boxes")
                 container.innerHTML = i;
 
-                if(reservedTickets[filmName].hasOwnProperty(i)) {
+                if (reservedTickets[filmName].hasOwnProperty(i)) {
                     container.style.backgroundColor = "red"
                 }
 
@@ -279,11 +277,11 @@ if(loggedUserData !== null) {
                 container.addEventListener("click",function() {
                     const approve = confirm(`You want to buy ${i}'s ticket?`) 
 
-                    if((reservedTickets[filmName].hasOwnProperty(i))) {
+                    if ((reservedTickets[filmName].hasOwnProperty(i))) {
                         alert(`ticket is already bougth by ${reservedTickets[filmName][i]}`)
                     }
 
-                    else if(approve) {
+                    else if (approve) {
 
                         container.style.backgroundColor = "red"
 
@@ -293,7 +291,6 @@ if(loggedUserData !== null) {
                             configurable:true,
                             writable:true,
                         })
-                        
 
                     } else  {
                         alert("Canceled")
@@ -305,7 +302,6 @@ if(loggedUserData !== null) {
 
                 booking.appendChild(container)
             })
-        }
 
 } else {
     const message = document.createElement("a");

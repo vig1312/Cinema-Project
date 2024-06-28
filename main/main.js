@@ -63,7 +63,7 @@ btnEng.addEventListener("click", function() {
 
 function onLoad() {
 
-    if((user !== null)) {
+    if ((user !== null)) {
         logUp.style.display = "none";
         logIn.style.display = "none";
         logOut.style.display = "flex";

@@ -12,7 +12,7 @@ inputUserName.addEventListener("input",function() {
     const usernameRegexp = /^[0-9A-Za-z]{6,16}$/;
 
     try {
-        if(!usernameRegexp.test(inputUserName.value)) {
+        if (!usernameRegexp.test(inputUserName.value)) {
             inputUserName.style.border = "1px solid red"
             throw new Error("Username must contain <br> UpperCase and LowerCase letters and numbers <br> min 6 characters")
         } else {
@@ -28,7 +28,7 @@ inputPassword.addEventListener("input",function() {
     const passwordRegexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     try {
-        if(!passwordRegexp.test(inputPassword.value)) {
+        if (!passwordRegexp.test(inputPassword.value)) {
             inputPassword.style.border = "1px solid red"
             throw new Error("Password must contain Upercase LowerCase and Numbers,min 8 characters")
         } else {
@@ -48,9 +48,9 @@ submitButton.addEventListener("click",function() {
       const usernameRegexp = /^\w+$/;
       const passwordRegexp = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
-        if(passwordRegexp.test(inputPassword.value) && usernameRegexp.test(inputUserName.value)) {
+        if (passwordRegexp.test(inputPassword.value) && usernameRegexp.test(inputUserName.value)) {
 
-            if(users.find(member => member.username === inputUserName.value) !== undefined) {
+            if (users.find(member => member.username === inputUserName.value) !== undefined) {
                 throw Error(`${inputUserName.value} is already exist`)
             } 
 
@@ -72,7 +72,7 @@ submitButton.addEventListener("click",function() {
             } 
         }
         
-        catch(error) {
+        catch (error) {
           message.innerHTML = error;
 
         }
