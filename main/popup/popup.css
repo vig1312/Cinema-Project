@@ -131,6 +131,7 @@ section .popup-forms input {
   border: none;
   background-color: rgb(219, 219, 219);
   border-radius: 10px;
+  outline: none;
 }
 section .popup-forms #input-date {
   padding: 7px 60px;
@@ -149,4 +150,9 @@ section .popup-forms button:hover {
   scale: 0.95;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.err-message {
+  color: red;
+  text-align: center;
 }

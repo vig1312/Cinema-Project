@@ -12,7 +12,7 @@ body {
 .container{
     width: 70%;
     height: 100vh;
-    background-color: white;
+    background-color: rgba($color: rgb(255, 255, 255), $alpha: 90%);
     margin: auto;
     padding: 5px 40px;
 }
@@ -92,7 +92,7 @@ section {
         padding: 50px 100px;
         // border: 1px solid black;
         border-radius: 10px;
-        background: linear-gradient(#fae3d9,rgb(240, 240, 240),);
+        background: linear-gradient(#fae3d9,rgb(223, 223, 223),);
 
         .popup-header-2 {
             font-family: Roboto;
@@ -132,4 +132,9 @@ section {
             }
         }
     }
+}
+
+.err-message {
+    color: red;
+    text-align: center;
 }
